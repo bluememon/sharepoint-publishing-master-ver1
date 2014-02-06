@@ -32,8 +32,9 @@
 	<asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" runat="server"/>
 	<SharePoint:SPPageManager runat="server"/>
 	<SharePoint:SPHelpPageComponent Visible="false" runat="server"/>
+	<SharePoint:CssRegistration ID="CssRegistration3" Name="<% $SPUrl:~SiteCollection/Style Library/vluememon4.css %>" After="corev4.css" runat="server"/>
 </head>
-<body scroll="no" onload="if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper();" class="v4master">
+<body scroll="no" onload="if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper();" class="v4master vluememon4">
   <form runat="server" onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}">
   <asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
 	<WebPartPages:SPWebPartManager id="m" runat="Server"/>
@@ -281,7 +282,7 @@
 			ChildrenAsTriggers="false"
 			runat="server">
 			<ContentTemplate>
-				<WebPartPages:WebPartAdder ID="WebPartAdder" runat="server"/>
+				<WebPartPages:WebPartAdder ID="WebPartAdder" runat="server" />
 			</ContentTemplate>
 			<Triggers>
 				<asp:PostBackTrigger ControlID="WebPartAdder" />
@@ -289,7 +290,7 @@
 		</asp:UpdatePanel>
 	</div>
 </div>
-<div id="s4-workspace">
+<div id="s4-workspace" class=".s4-nosetwidth">
 		<div id="s4-bodyContainer">
 			<div id="s4-titlerow" class="s4-pr s4-notdlg s4-titlerowhidetitle">
 				<div class="s4-title s4-lp">
@@ -625,6 +626,8 @@
 						<asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" runat="server">
 						</asp:ContentPlaceHolder>
 					</div>
+				</div>
+				<div class="vluememon4-footer s4-notdlg">
 				</div>
 			</div>
 			<SharePoint:DeveloperDashboard runat="server"/>
