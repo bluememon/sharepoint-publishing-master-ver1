@@ -48,3 +48,17 @@ body.vluememon4
 	height: 100px;
 	background-color: red;
 }
+
+
+
+
+/* fixes for the dialogs */
+.ms-dialog .vluememon4 #s4-bodyContainer
+{
+	padding: 0;
+}
+
+.ms-dialog .vluememon4 #s4-bodyContainer #s4-mainarea
+{
+	min-width: 0 !important;
+}
